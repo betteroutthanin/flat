@@ -1,3 +1,4 @@
+import datetime
 '''
 https://marlinfw.org/docs/gcode
 - Start at bottom left corner
@@ -12,6 +13,7 @@ https://marlinfw.org/docs/gcode
 def flat(xDelta, yDelta, zDelta, zStepSize, speed, feed, cutterWidth):
     le = "\n"
     b=  ""
+    b += "(" + datetime.datetime.now().strftime("%Y/%B/%d/ at %H:%M:%S:%p") +")" + le
     b += "(xDelta = " + str(xDelta) + ")" + le
     b += "(yDelta = " + str(yDelta) + ")" + le
     b += "(zDelta = " + str(zDelta) + ")" + le
@@ -88,12 +90,15 @@ def flat(xDelta, yDelta, zDelta, zStepSize, speed, feed, cutterWidth):
         b += "G01 X" + str(x) + " Y" + str(y) + " Z" + str(2) + le            
     # End while zp
 
-    # Return to Zero (or start)
-    # Todo
+    # Y boarder on each side?
     
+    # Wrap it up
     b += le + "(Stopping Spindle)" + le
     b += "M05" + le
+
+    b += le + "(End - All done!)" + le
     
+    # Write the file
     f = open("flat.nc", "w")
     f.write(b)
     f.close()

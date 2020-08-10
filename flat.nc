@@ -1,3 +1,4 @@
+(2020/August/10/ at 10:51:13:AM)
 (xDelta = 600)
 (yDelta = 150)
 (zDelta = 11)
@@ -202,3 +203,5 @@ G01 X0.0 Y0.0 Z2
 
 (Stopping Spindle)
 M05
+
+(End - All done!)
