@@ -1,4 +1,4 @@
-(2020/August/10/ at 10:51:13:AM)
+(2020/August/10/ at 11:02:42:AM)
 (xDelta = 600)
 (yDelta = 150)
 (zDelta = 11)
@@ -15,6 +15,7 @@ G01 F1000
 (Lower the head to Z0 before we begin - half the feed rate)
 G01 Z0.0 F250.0
 
+(Starting a new x/y pass!)
 (Lower the head to to target z for this x/y pass - 1/4 rate)
 (Target Z = -2.0)
 G01 Z-2.0 F250.0
@@ -46,6 +47,7 @@ G01 X600 Y150 Z-2.0
 (Returning head for next pass)
 G01 X0.0 Y0.0 Z2
 
+(Starting a new x/y pass!)
 (Lower the head to to target z for this x/y pass - 1/4 rate)
 (Target Z = -4.0)
 G01 Z-4.0 F250.0
@@ -77,6 +79,7 @@ G01 X600 Y150 Z-4.0
 (Returning head for next pass)
 G01 X0.0 Y0.0 Z2
 
+(Starting a new x/y pass!)
 (Lower the head to to target z for this x/y pass - 1/4 rate)
 (Target Z = -6.0)
 G01 Z-6.0 F250.0
@@ -108,6 +111,7 @@ G01 X600 Y150 Z-6.0
 (Returning head for next pass)
 G01 X0.0 Y0.0 Z2
 
+(Starting a new x/y pass!)
 (Lower the head to to target z for this x/y pass - 1/4 rate)
 (Target Z = -8.0)
 G01 Z-8.0 F250.0
@@ -139,6 +143,7 @@ G01 X600 Y150 Z-8.0
 (Returning head for next pass)
 G01 X0.0 Y0.0 Z2
 
+(Starting a new x/y pass!)
 (Lower the head to to target z for this x/y pass - 1/4 rate)
 (Target Z = -10.0)
 G01 Z-10.0 F250.0
@@ -170,6 +175,7 @@ G01 X600 Y150 Z-10.0
 (Returning head for next pass)
 G01 X0.0 Y0.0 Z2
 
+(Starting a new x/y pass!)
 (Lower the head to to target z for this x/y pass - 1/4 rate)
 (Target Z = -11.0)
 G01 Z-11.0 F250.0

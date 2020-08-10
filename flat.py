@@ -53,7 +53,8 @@ def flat(xDelta, yDelta, zDelta, zStepSize, speed, feed, cutterWidth):
             z = zDelta
             zp = 0
 
-        b += le + "(Lower the head to to target z for this x/y pass - 1/4 rate)" + le
+        b += le + "(Starting a new x/y pass!)" + le
+        b += "(Lower the head to to target z for this x/y pass - 1/4 rate)" + le
         b += "(Target Z = " + str(z) + ")" + le
         b += "G01 Z" + str(z) + " " + "F" + str(feed / 4) + le
         
