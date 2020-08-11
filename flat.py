@@ -89,7 +89,7 @@ def flat(xDelta, yDelta, zDelta, zStepSize, speed, feed, cutterWidth):
         y = 0.0        
 
         b += "(Returning head for next pass)" + le
-        b += "G01 X" + v(x) + " Y" + v(y) + " Z" + v(2) + le            
+        b += "G01 X" + v(x) + " Y" + v(y) + " Z" + v(2.0) + le            
     # End while zp
 
     # Y boarder on each side?
@@ -106,7 +106,11 @@ def flat(xDelta, yDelta, zDelta, zStepSize, speed, feed, cutterWidth):
     f.close()
 
 def v(value: float):    
-    b = str(value)
-    b = "{:.2f}".format(value)
+    value = round(value, 2)
+    i = int(value)
+    if i == value:            
+        b = "{}".format(i)
+    else:
+        b = "{:.2f}".format(value)    
     return b
    
